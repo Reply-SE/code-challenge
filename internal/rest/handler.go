@@ -46,7 +46,6 @@ func (h *handler) getVlans(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	w.Header().Add("Content-Type", "application/json")
 	_, err = w.Write(b)
 	if err != nil {
 		log.Fatal(err)
